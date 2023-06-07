@@ -22,9 +22,11 @@ try:
     print(f'Created table : {(tables[0])}\n')
     connection.commit()
 
-    query = """INSERT INTO PYTHON_DB(id,name) VALUES(%s,%s)"""
-    data = ((2,'Chandu'))
-    #cursor.execute(query,data)
+    
+    query = f"INSERT INTO PYTHON_DB(id,name) VALUES (%s,%s)"
+    from custom import extract_csv
+    data = extract_csv(file_name='data.csv')
+    cursor.executemany(query,data)
     print('DB updated successfully ! ')
     connection.commit()
 
@@ -44,6 +46,9 @@ try:
     cursor.execute(query)
     records = cursor.fetchall()
     
+
+
+    connection.close()
     for _ in records:
         print(_[0],_[1],sep='\t')
 
