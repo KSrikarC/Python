@@ -50,7 +50,9 @@ try:
 
     print('----------------------------') 
     cursor.close()
-    connection.close()   
+    connection.close()
+    
+    
 except Exception as e:
     print('Identified Error is : ',str(e))
 
