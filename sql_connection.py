@@ -36,7 +36,7 @@ try:
     cols = []
     for _ in columns:
         cols.append(_[0])
-
+    print('----------------------------')
     for val in cols:
         print(val,end='\t')
     print()
@@ -47,7 +47,7 @@ try:
     for _ in records:
         print(_[0],_[1],sep='\t')
 
-    
+    print('----------------------------')    
 except Exception as e:
     print('Identified Error is : ',str(e))
 
