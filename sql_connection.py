@@ -48,11 +48,13 @@ try:
     
 
 
-    connection.close()
+    
     for _ in records:
         print(_[0],_[1],sep='\t')
 
-    print('----------------------------')    
+    print('----------------------------') 
+    cursor.close()
+    connection.close()   
 except Exception as e:
     print('Identified Error is : ',str(e))
 
