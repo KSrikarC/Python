@@ -44,11 +44,7 @@ try:
     print()
     query = 'SELECT * FROM PYTHON_DB'
     cursor.execute(query)
-    records = cursor.fetchall()
-    
-
-
-    
+    records = cursor.fetchall()    
     for _ in records:
         print(_[0],_[1],sep='\t')
 
