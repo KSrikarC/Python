@@ -9,11 +9,7 @@ try:
         return connection
     
     def fetch_records(connection):
-        cursor = connection.cursor()                             
-        query = 'SELECT * FROM PYTHON_DB'
-        cursor.execute(query)
-        records = cursor.fetchall()    
-        return records
+        
 
 
 
