@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <title>
+        Inserting new records
+    </title>
+    <!--
+    <form method="POST" action="/insert">
+
+        <label for="ID"> Student ID : </label> 
+            <input type = 'text' id="ID" name="ID" required> <br>
+        <label for="Name"> Student Name : </label> 
+            <input type = 'text' id="Name" name="Name" required> <br>
+        <label for="Dept"> Student Department : </label> 
+            <input type = 'text' id="Dept" name="Dept" required>
+
+    </form>
+    -->
+
+
+    <style>
+        .form-container{
+            text-align: center;
+        }
+
+        .form-row {
+            margin-bottom: 10px;
+        }
+    
+        .form-row label {
+            display: inline-block;
+            width: 150px;
+            text-align: right;
+        }
+    
+        .form-row input {
+            width: 200px;
+        }
+
+        .form-row input[type='submit'] {
+            padding: 5px 3px;
+            font-size: 14px;
+        }
+    </style>
+    
+    <form method="POST" action="/insert">
+        <div class="form-row">
+            <label for="ID">Student ID:</label>
+            <input type="text" id="ID" name="ID" required>
+        </div>
+        <div class="form-row">
+            <label for="Name">Student Name:</label>
+            <input type="text" id="Name" name="Name" required>
+        </div>
+        <div class="form-row">
+            <label for="Dept">Student Department:</label>
+            <input type="text" id="Dept" name="Dept" required>
+        </div>
+        <div class="form-row">
+        <input type="submit" value="Submit">
+        </div>
+    </form>
+    
+
+
+
+</html>
