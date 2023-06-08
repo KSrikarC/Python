@@ -12,7 +12,7 @@ try:
 
     cursor = connection.cursor()      
 
-    create_query = 'CREATE TABLE IF NOT EXISTS PYTHON_DB (id INT, name VARCHAR(20))'  
+    create_query = 'CREATE TABLE IF NOT EXISTS PYTHON_DB (id INT, name VARCHAR(20),Department VARCHAR(10))'  
     cursor.execute(create_query)
     connection.commit()
 
@@ -23,7 +23,7 @@ try:
     connection.commit()
 
     
-    query = f"INSERT INTO PYTHON_DB(id,name) VALUES (%s,%s)"
+    query = f"INSERT INTO PYTHON_DB(id,name,department) VALUES (%s,%s,%s)"
     from custom import extract_csv
     data = extract_csv(file_name='data.csv')
     cursor.executemany(query,data)
@@ -46,7 +46,7 @@ try:
     cursor.execute(query)
     records = cursor.fetchall()    
     for _ in records:
-        print(_[0],_[1],sep='\t')
+        print(_[0],_[1],_[2],sep='\t')
 
     print('----------------------------') 
     cursor.close()
