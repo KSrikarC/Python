@@ -1,0 +1,2 @@
+The laptop is DELL G3 Laptop 123 which is powered by intel core i5.
+It has 8GB of RAM & NVIDIA GeForce GTX 1050Ti dedicated GPU
