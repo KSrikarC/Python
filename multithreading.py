@@ -29,5 +29,5 @@ print(f"Ran in {round(time.time() - t,2)} seconds")
 t=time.time()
 cal_sq([1,2,3,4,5])
 cal_cube([1,2,3,4,5])
-print(f"Ran in {round(time.time() - t,2)} seconds")
+print(f"Finished in {round(time.time() - t,2)} seconds")
 
